@@ -1,7 +1,7 @@
 # React-Text-Highlights
 
 This is a React componenet to highlight phrases and text.
-You can find a [demo here](https://zombieanomaly.github.io/React-Highlight-Text/)
+You can find a [demo here](https://zombieanomaly.github.io/React-Text-Highlights)
 
 ----
 
