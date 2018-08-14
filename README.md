@@ -40,11 +40,11 @@ Taking the example from below in the **Usage** section, phrases that are blue ar
 
 | Property | Type | Required? | Description |
 |:---|:---|:---:|:---|
-| phrases | Dictionary | yes | a dictionary of phrases to highlight |
+| phrases | Dictionary | yes | a dictionary of phrases to highlight (priority lowest-highest) |
 | noWhiteSpace | Boolean | no | Specifies if you want additional white space around highlighted text (default false)|
 | inputField | Boolean | no | Will component display textarea for string input? (default false) |
 | autoStart | Boolean | no | If true component will automatically highlight text on render (default false) |
-| defaultText | String | no | text to be highlighted (can be modified if inputField enabled |
+| defaultText | String | no | text to be highlighted (can be modified if inputField enabled) |
 | textAreaRows | Number | no | if inputField enabled this sets rows of the TextArea |
 | textAreaCols | Number | no | if inputField enabled this sets columns of the TextArea |
 
