@@ -7,33 +7,14 @@ You can find a [demo here](https://zombieanomaly.github.io/React-Text-Highlights
 
 # Usage
 
-    import React, { Component } from 'react';
-    import logo from './logo.svg';
-    import './App.css';
-    import TextController from './Components/TextController';
+    import '../node_modules/react-text-highlights/styles.css';
+    import {TextController} from 'react-text-highlights';
 
     class App extends Component {
       
-      constructor(props){
-        super(props);
-        
-        this.phraseDictFirst = {
-          'red': ['text highlighting! some text can', 'highlighted', 'phrases to isolate'],
-          'yellow': ['text highlighting', 'isolate their highlight']
-        }
-        
-        this.phraseDictSecond = {
-          'green': ['adorable puppy party'],
-          'red': ['an adorable puppy', 'will deliver new', ],
-          'blue': ['adorable', 'new technology'],
-        }
-      }
-
       render() {
         return (
-            <TextController  phrases={this.phraseDictFirst} noWhiteSpace={true} input={false} autoStart={true} defaultText="this is an example of text highlighting! some text can be highlighted and some non-highlighted. hover over phrases to isolate their highlight effect."/>
-        
-            <TextController phrases={this.phraseDictSecond} noWhiteSpace={false} input={true} autoStart={false} defaultText="an adorable puppy party will deliver new technology"/>
+        <TextController  phrases={{'red':['highlight'], 'blue':['highlight effect'], 'yellow':['text highlighting']}} noWhiteSpace={true} input={false} autoStart={true} defaultText="this is an example of text highlighting! some text can be highlighted and some non-highlighted. hover over phrases to isolate their highlight effect."/>
         );
       }
     }
@@ -51,6 +32,8 @@ You can find a [demo here](https://zombieanomaly.github.io/React-Text-Highlights
 | inputField | Boolean | no | Will component display textarea for string input? (default false) |
 | autoStart | Boolean | no | If true component will automatically highlight text on render (default false) |
 | defaultText | String | no | text to be highlighted (can be modified if inputField enabled |
+| textAreaRows | Number | no | if inputField enabled this sets rows of the TextArea |
+| textAreaCols | Number | no | if inputField enabled this sets columns of the TextArea |
 
 ----
 
