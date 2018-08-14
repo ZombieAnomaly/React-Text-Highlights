@@ -2,7 +2,7 @@
   "name": "react-text-highlights",
   "version": "1.0.7",
   "description": "A customizable componenet library to highlight phrases in text",
-  "main": "lib/index.js",
+  "main": "index.js",
   "scripts": {
     "dev": "concurrently \"npm run lib:watch\" \"npm run docs\"",
     "lib": "babel src/lib -d lib --copy-files",
