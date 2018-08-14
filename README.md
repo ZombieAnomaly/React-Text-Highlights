@@ -42,5 +42,12 @@ You can find a [demo here](https://zombieanomaly.github.io/React-Text-Highlights
 
 ----
 
+# Installation
+    npm i --save react-text-highlights
+
+----
+
 # License
 MIT License - modify, fork, clone and use this however you want or need friends.
+
+----
