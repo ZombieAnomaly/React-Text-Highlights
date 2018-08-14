@@ -48,7 +48,6 @@ class TextController extends Component {
         for(let i=0;i<phrases.length;i++){ //loop through each of our phrases
             let startIdx = 0;
             let string = strInput.replace(/\s\s+/g, ' ');
-            string = string.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
             let phraseIdx = string.indexOf(phrases[i],startIdx);
             console.log(phrases[i]);
             while(phraseIdx != -1){
