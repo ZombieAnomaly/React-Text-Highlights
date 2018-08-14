@@ -1,5 +1,3 @@
 import TextController from './lib/Components/TextController';
 
-module.exports = {
-  TextController,
-};
+export class TextController{}
