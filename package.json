@@ -1,6 +1,6 @@
 {
   "name": "react-text-highlights",
-  "version": "1.0.7",
+  "version": "1.0.71",
   "description": "A customizable componenet library to highlight phrases in text",
   "main": "index.js",
   "scripts": {
