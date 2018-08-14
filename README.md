@@ -1,8 +1,13 @@
-# React-Text-Highlights
+# React-Text-Highlights ![Build](https://img.shields.io/badge/build-passing-brightgreen.svg) ![NPM](https://img.shields.io/badge/npm-5.5.1-brightgreen.svg) ![Package](https://img.shields.io/badge/npm%20package-1.1.1-brightgreen.svg)
 
 This is a React componenet to highlight phrases or a group of phrases within text.
 You can find a [demo here](https://zombieanomaly.github.io/React-Text-Highlights)
 
+----
+
+# Installation
+    npm i --save react-text-highlights
+    
 ----
 
 # Important Concept
@@ -47,11 +52,6 @@ Taking the example from below in the **Usage** section, phrases that are blue ar
 | defaultText | String | no | text to be highlighted (can be modified if inputField enabled) |
 | textAreaRows | Number | no | if inputField enabled this sets rows of the TextArea |
 | textAreaCols | Number | no | if inputField enabled this sets columns of the TextArea |
-
-----
-
-# Installation
-    npm i --save react-text-highlights
 
 ----
 
