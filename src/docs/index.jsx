@@ -26,6 +26,12 @@ function Demo() {
       <TextController phrases={phraseDictFirst} noWhiteSpace={true} inputField={true} textAreaCols={50} textAreaRows={5} autoStart={false} defaultText="this is an example of text highlighting! some text can be highlighted and some non-highlighted. hover over phrases to isolate their highlight effect."/>
       <hr/>
       <TextController phrases={phraseDictSecond} noWhiteSpace={false} inputField={true} textAreaCols={30} textAreaRows={5} autoStart={true} defaultText="an adorable puppy party will deliver new technology"/>
+      <TextController  phrases={{
+          'blue':['highlight effect'], 
+          'yellow':['text highlighting'],
+          'red':['highlight']}} 
+        noWhiteSpace={true} inputField={true} textAreaCols={50} textAreaRows={5} autoStart={true} defaultText="this is an example of text highlighting! some text can be highlighted and some non-highlighted. hover over phrases to isolate their highlight effect."/>
+
     </div>
   );
 }
