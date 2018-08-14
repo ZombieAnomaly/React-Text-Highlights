@@ -14,7 +14,7 @@ You can find a [demo here](https://zombieanomaly.github.io/React-Text-Highlights
       
       render() {
         return (
-        <TextController  phrases={{'red':['highlight'], 'blue':['highlight effect'], 'yellow':['text highlighting']}} noWhiteSpace={true} input={false} autoStart={true} defaultText="this is an example of text highlighting! some text can be highlighted and some non-highlighted. hover over phrases to isolate their highlight effect."/>
+        <TextController  phrases={{'red':['highlight'], 'blue':['highlight effect'], 'yellow':['text highlighting']}} noWhiteSpace={true} inputField={true} textAreaCols={50} textAreaRows={5} autoStart={true} defaultText="this is an example of text highlighting! some text can be highlighted and some non-highlighted. hover over phrases to isolate their highlight effect."/>
         );
       }
     }
