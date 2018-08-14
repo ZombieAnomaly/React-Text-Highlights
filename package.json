@@ -53,5 +53,8 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:ZombieAnomaly/React-Text-Highlights.git"
+  },
+  "dependencies": {
+    "rx": "^4.1.0"
   }
 }

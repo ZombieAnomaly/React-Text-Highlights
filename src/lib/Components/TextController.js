@@ -4,6 +4,7 @@ import HighlightItem from './HighlightItem';
 import replaceAt from '../Utilities/ReplaceAt';
 import updateHighlights from '../Utilities/UpdateHighlights';
 
+
 class TextController extends Component {
 
     constructor(props){
@@ -47,10 +48,12 @@ class TextController extends Component {
     parsePhrases(phrases,phraseColor,strInput){
         for(let i=0;i<phrases.length;i++){ //loop through each of our phrases
             let startIdx = 0;
-            let string = strInput.replace(/\s\s+/g, ' ');
+            let string = strInput.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").replace(/\s\s+/g, ' ');
+            console.log(string);
             let phraseIdx = string.indexOf(phrases[i],startIdx);
             console.log(phrases[i]);
             while(phraseIdx != -1){
+                console.log(phrases[i],startIdx);
                 var words = phrases[i].split(" "); //split phrase up into words
                 let offset = 0;
                 words.forEach(word => { //for each word get its index and check if its in HighlightDict
