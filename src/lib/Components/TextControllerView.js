@@ -10,12 +10,20 @@ class TextControl extends Component {
 
 
     render() {
-        if(this.props.inputField){
+        if(this.props.inputField && !this.props.submitOnChange){
             return (
                 <div className="HighlightInput">
                     <div onMouseOver={this.props.onMouseOver} onMouseOut={this.props.onMouseOut} className="results">{this.props.result}</div>
                     <textarea cols={this.props.textAreaCols} rows={this.props.textAreaRows} className="HighlightInputTextArea" value={this.props.textInput} onChange={this.props.handleTextAreaChange}> </textarea>
                     <button onClick={this.props.onSubmit} className="HighlightInputButton">Submit</button>
+                </div>
+            );
+        }
+        else if(this.props.inputField && this.props.submitOnChange){
+            return (
+                <div className="HighlightInput">
+                    <div onMouseOver={this.props.onMouseOver} onMouseOut={this.props.onMouseOut} className="results">{this.props.result}</div>
+                    <textarea cols={this.props.textAreaCols} rows={this.props.textAreaRows} className="HighlightInputTextArea" value={this.props.textInput} onChange={this.props.handleTextAreaChange}> </textarea>
                 </div>
             );
         }else{

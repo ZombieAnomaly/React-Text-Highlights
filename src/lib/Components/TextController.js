@@ -93,11 +93,18 @@ class TextController extends Component {
     }
 
     //* Event Handlers *//
-    handleTextAreaChange(event) { this.setState({textInput: event.target.value}); }
+    handleTextAreaChange(event) { 
+        this.setState({textInput: event.target.value}, function(){
+            if(this.props.submitOnChange)
+                this.calcHighlights();
+        });
+    }
 
     handleInputSubmit(){ this.calcHighlights(); }
 
     handleMouseOver(event){
+        if(!this.props.hoverEffect){return};
+        
         if(!event.target.getAttribute("class")){return};
         //get info from element our mouse entered
         let idx = event.target.getAttribute("data-myid");
@@ -113,7 +120,10 @@ class TextController extends Component {
         this.highlightPhrases(temp); 
     }
 
-    handleMouseExit(){ this.highlightPhrases(this.highlightDict); }
+    handleMouseExit(){ 
+        if(!this.props.hoverEffect){return};
+        this.highlightPhrases(this.highlightDict);
+    }
     
     componentDidMount(){
         if(this.props.autoStart)
@@ -127,6 +137,7 @@ class TextController extends Component {
                 textInput={this.state.textInput} 
                 result={this.state.result}
                 onMouseOver={this.handleMouseOver}
+                submitOnChange={this.props.submitOnChange}
                 onMouseOut={this.handleMouseExit}
                 inputField={this.props.inputField} autoStart={this.props.autoStart}
                 textAreaCols={this.props.textAreaCols} textAreaRows={this.props.textAreaRows}/>
