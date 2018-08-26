@@ -17,7 +17,7 @@ class TextController extends Component {
             textInput: props.defaultText,
             result: ""
         }
-
+        this.regex = props.regex || /[.,\/#!$%\^&\*;:{}=\-_`~()]/g
         this.handleTextAreaChange = this.handleTextAreaChange.bind(this);
         this.handleInputSubmit = this.handleInputSubmit.bind(this);
         
@@ -48,7 +48,7 @@ class TextController extends Component {
     parsePhrases(phrases,phraseColor,strInput){
         for(let i=0;i<phrases.length;i++){ //loop through each of our phrases
             let startIdx = 0;
-            let string = strInput.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").replace(/\s\s+/g, ' ')+" ";
+            let string = strInput.replace(this.regex,"").replace(/\s\s+/g, ' ')+" ";
             let phraseIdx = string.indexOf(phrases[i]+" ",startIdx);
             while(phraseIdx != -1){
                 var words = phrases[i].split(" "); //split phrase up into words
