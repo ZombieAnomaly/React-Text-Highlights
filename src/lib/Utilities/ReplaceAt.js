@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import HighlightText from '../Components/HighlightText';
 
 function replaceAt(index, word, phraseColor, textColor, highlightedTextArr,whiteSpace){
-    let el = <HighlightText noWhiteSpace={whiteSpace} state={{color:phraseColor,textColor: textColor,content:word, key:index}} key={index+word}/>
     let idx = 0;
     let tempArr = highlightedTextArr.slice();
    // console.log(tempArr);
@@ -15,8 +14,8 @@ function replaceAt(index, word, phraseColor, textColor, highlightedTextArr,white
         }
 
         //console.log(temp,word,idx,index, temp.length)
-
         if(index == idx){
+            let el = <HighlightText noWhiteSpace={whiteSpace} state={{color:phraseColor,textColor: textColor,content:tempArr[i], key:index}} key={index+word}/>
             tempArr[i] = {element:el,length:word.length};
             //console.log(tempArr[i]);
             return tempArr;
