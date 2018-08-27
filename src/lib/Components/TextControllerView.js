@@ -23,7 +23,7 @@ class TextControl extends Component {
             return (
                 <div className="HighlightInput">
                     <div onMouseOver={this.props.onMouseOver} onMouseOut={this.props.onMouseOut} className="results">{this.props.result}</div>
-                    <textarea cols={this.props.textAreaCols} rows={this.props.textAreaRows} className="HighlightInputTextArea" value={this.props.textInput} onChange={this.props.handleTextAreaChange}> </textarea>
+                    <textarea cols={this.props.textAreaCols} rows={this.props.textAreaRows} className="HighlightInputTextArea" value={this.props.textInput} onKeyDown={this.props.handleKeyDown} onChange={this.props.handleTextAreaChange}> </textarea>
                 </div>
             );
         }else{
