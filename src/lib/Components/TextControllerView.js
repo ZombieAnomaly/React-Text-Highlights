@@ -6,6 +6,7 @@ class TextControl extends Component {
     constructor(props){
         super(props);
         this.props = props;
+        this.node;
     }
 
 
@@ -23,7 +24,7 @@ class TextControl extends Component {
             return (
                 <div className="HighlightInput">
                     <div onMouseOver={this.props.onMouseOver} onMouseOut={this.props.onMouseOut} className="results">{this.props.result}</div>
-                    <textarea cols={this.props.textAreaCols} rows={this.props.textAreaRows} className="HighlightInputTextArea" value={this.props.textInput} onKeyDown={this.props.handleKeyDown} onChange={this.props.handleTextAreaChange}> </textarea>
+                    <textarea ref={(el) => {this.node = el}} cols={this.props.textAreaCols} rows={this.props.textAreaRows} className="HighlightInputTextArea" value={this.props.textInput} onMouseUp={this.props.handleMouseDown} onKeyDown={this.props.handleKeyDown} onKeyUp={this.props.handleKeyUp} onChange={this.props.handleTextAreaChange}> </textarea>
                 </div>
             );
         }else{

@@ -29,8 +29,8 @@ function Demo() {
       <TextController  phrases={{
           'blue':['highlight effect '], 
           'yellow':['text highlighting '],
-          'red':['highlight ']}} 
-        noWhiteSpace={true} tabbing={true} submitOnChange={true} inputField={true} textAreaCols={50} textAreaRows={5} autoStart={true} defaultText="this is an example of text highlighting! some text can be highlighted and some non-highlighted. hover over phrases to isolate their highlight effect."/>
+          'red':['highlight ', ":: ", ":end ", ": "]}} 
+        caret={{style:{position:'relative', right:'2px'},timer:500,character:"|"}} noWhiteSpace={true} tabbing={true} submitOnChange={true} inputField={true} textAreaCols={50} textAreaRows={5} autoStart={true} defaultText="this is an example of text highlighting! some text can be highlighted and some non-highlighted. hover over phrases to isolate their highlight effect."/>
 
     </div>
   );

@@ -1,5 +1,5 @@
 {
-  "name": "react-text-highlights",
+  "name": "@zombieanomaly/react-text-highlights",
   "version": "1.1.35",
   "description": "A customizable componenet library to highlight phrases in text",
   "main": "index.js",
